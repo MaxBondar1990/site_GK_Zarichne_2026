@@ -168,7 +168,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 			cssMinify: !templateConfig.styles.devfiles,
 			cssCodeSplit: templateConfig.styles.codesplit,
 			rollupOptions: {
-				input: isWp ? ['src/components/wordpress/fls-theme/assets/app.js'] : globSync('./src/*.html'),
+				input: isWp ? ['components/wordpress/fls-theme/assets/app.js'] : globSync('./*.html'),
 				plugins: [
 					templateImports.rollupPlugins
 				],

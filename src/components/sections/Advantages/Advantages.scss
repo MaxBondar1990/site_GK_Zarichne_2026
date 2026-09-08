@@ -1,0 +1,23 @@
+.Advantages {
+   h2 {
+      color: red;
+      display: flex;
+      justify-content: center;
+   }
+
+   .wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      align-items: center;
+   }
+
+   &__content {
+      flex: 1;
+   }
+
+   img {
+      width: 50%;
+      height: auto;
+   }
+}

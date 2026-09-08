@@ -1,0 +1,1 @@
+import './Advantages.scss'
