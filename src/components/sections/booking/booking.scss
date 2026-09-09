@@ -1,0 +1,49 @@
+.booking {
+  width: min(470px, 92vw);
+  border: 1px solid var(--line);
+  padding: 32px;
+  border-radius: 16px;
+  color: var(--text);
+  background: var(--paper);
+  max-height: 90dvh;
+  overflow: auto;
+
+  &::backdrop {
+    background: #132d26a6;
+    backdrop-filter: blur(4px)
+  }
+
+  &__close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: none;
+    color: var(--green)
+  }
+
+  &__title {
+    font-size: 26px;
+    padding-right: 30px
+  }
+
+  &__form .button {
+    width: 100%
+  }
+
+  &__status {
+    color: var(--green);
+    font-size: 14px;
+    margin: 0
+  }
+
+  &__selection {
+    font-size: 14px
+  }
+}
+
+body:has(dialog[open]) {
+  overflow: hidden
+}

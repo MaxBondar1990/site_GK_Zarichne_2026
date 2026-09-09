@@ -1,0 +1,14 @@
+<template src="@components/templates/main/main.html"
+  locals='{"title": "Квартири", "description": "Квартири у ЖК Заріччя в Березані. Планування та матеріали житлового будинку."}'>
+  <block name="main">
+    <div class="page-heading__container">
+      <nav class="breadcrumbs"><a href="index.html">Головна</a><span>›</span><span>Квартири</span></nav>
+      <div class="page-heading">
+        <h1>Знайдіть свою квартиру</h1>
+        <p>Оберіть планування, яке підходить саме вам, і зробіть перший крок до нового життя у ЖК Заріччя.</p>
+      </div>
+    </div>
+    <include src="@components/sections/catalog/catalog.html"></include>
+    <include src="@components/sections/consultation/consultation.html"></include>
+  </block>
+</template>

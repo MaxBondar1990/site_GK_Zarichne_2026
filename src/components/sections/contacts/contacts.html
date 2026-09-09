@@ -1,0 +1,49 @@
+<section class="contacts" data-fls-contacts>
+  <div class="contacts__container">
+    <div class="page-heading">
+      <p class="eyebrow">ЖК ЗАРІЧЧЯ · БЕРЕЗАНЬ</p>
+      <h1>Познайомимося<br>з вашим майбутнім домом</h1>
+      <p>Дізнайтеся більше про будинок та оберіть зручний час для перегляду.</p>
+    </div>
+    <div class="contacts__layout">
+      <article class="contacts__info">
+        <h2>Контактна інформація</h2>
+        <dl class="contacts__list">
+          <div>
+            <dt>Відділ продажу</dt>
+            <dd>+38 (0XX) XXX-XX-XX</dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd>sales@example.com</dd>
+          </div>
+          <div>
+            <dt>Графік роботи</dt>
+            <dd>Уточнюється</dd>
+          </div>
+          <div>
+            <dt>Адреса</dt>
+            <dd>Березань,<br>вул. Героїв Небесної Сотні, 68</dd>
+          </div>
+        </dl>
+        <p class="note">Контакти демонстраційні. Реальні дані буде додано згодом.</p>
+      </article>
+      <form class="contacts__form" data-request-form>
+        <h2>Записатися на перегляд</h2><label class="field">Ім’я *<input name="name" autocomplete="given-name"
+            required placeholder="Ваше ім’я" maxlength="80"></label><label class="field">Телефон *<input
+            name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0XX) XXX-XX-XX"
+            minlength="10" maxlength="24"></label><label class="field">Зручний час<select name="time">
+            <option>Оберіть час</option>
+            <option>Ранок, 09:00–12:00</option>
+            <option>День, 12:00–17:00</option>
+            <option>Вечір, 17:00–19:00</option>
+          </select></label><label class="field">Коментар<textarea name="comment"
+            placeholder="Ваше повідомлення (необов’язково)" maxlength="1000"></textarea></label><button
+          class="button" type="submit">Надіслати заявку ↗</button>
+        <p class="note">Демонстраційна форма: дані не надсилаються й не зберігаються.</p>
+        <p class="contacts__status" role="status"></p>
+      </form>
+    </div><img class="location__map" src="@img/footer/full_google_mitka.jpg"
+      alt="Карта розташування будинку в Березані" loading="lazy" width="1086" height="836">
+  </div>
+</section>

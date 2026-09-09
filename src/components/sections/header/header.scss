@@ -1,6 +1,132 @@
 .header {
-   .img-logo{
-       width: 300px;
-      height: 300px;
-   }
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 92px
+  }
+
+  &__toggle {
+    display: none
+  }
+
+  &__navigation {
+    margin-left: auto;
+    margin-right: 24px
+  }
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+
+  &__image {
+    width: 48px;
+    height: 48px;
+    object-fit: contain
+  }
+
+  &__name {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1px
+  }
+
+  &__prefix {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0
+  }
+}
+
+.navigation {
+  display: flex;
+  gap: 22px;
+
+  &__link {
+    font-size: 14px;
+    white-space: nowrap;
+    padding: 12px 0;
+
+    &:hover,
+    &[aria-current=page] {
+      color: var(--green);
+      text-decoration: underline;
+      text-underline-offset: 6px
+    }
+  }
+}
+
+@media(max-width:1100px) {
+  .header__action {
+    display: none
+  }
+
+  .header__navigation {
+    margin-right: 0
+  }
+
+  .navigation {
+    gap: 18px
+  }
+}
+
+@media(max-width:760px) {
+  .header {
+    &__container {
+      min-height: 76px
+    }
+
+    &__toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      background: none;
+
+      span {
+        width: 24px;
+        height: 2px;
+        background: var(--green)
+      }
+    }
+
+    &__navigation {
+      display: none;
+      position: absolute;
+      top: 76px;
+      left: 0;
+      right: 0;
+      background: var(--paper);
+      padding: 20px 6%;
+      border-bottom: 1px solid var(--line);
+      margin: 0;
+      flex-direction: column;
+
+      &--open {
+        display: flex
+      }
+    }
+  }
+
+  .brand__name {
+    font-size: 23px
+  }
+
+  .navigation__link {
+    font-size: 17px
+  }
 }

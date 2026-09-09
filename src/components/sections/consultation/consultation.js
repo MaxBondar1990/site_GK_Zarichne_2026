@@ -1,0 +1,1 @@
+import './consultation.scss';

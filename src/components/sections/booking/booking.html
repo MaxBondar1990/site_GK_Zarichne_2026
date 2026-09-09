@@ -1,0 +1,13 @@
+<dialog class="booking" data-fls-booking aria-labelledby="booking-title"><button class="booking__close"
+    aria-label="Закрити">✕</button>
+  <h2 id="booking-title" class="booking__title">Записатися на перегляд</h2>
+  <p class="booking__selection" hidden></p>
+  <form class="booking__form" data-request-form><label class="field">Ім’я *<input name="name"
+        autocomplete="given-name" required placeholder="Ваше ім’я" maxlength="80"></label><label
+      class="field">Телефон *<input name="phone" type="tel" autocomplete="tel" required
+        placeholder="+38 (0XX) XXX-XX-XX" minlength="10" maxlength="24"></label><button class="button"
+      type="submit">Записатися ↗</button>
+    <p class="note">Демонстраційна форма. Дані не надсилаються й не зберігаються.</p>
+    <p class="booking__status" role="status"></p>
+  </form>
+</dialog>

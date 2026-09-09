@@ -1,0 +1,29 @@
+<section class="catalog" data-fls-catalog>
+  <div class="catalog__container">
+    <div class="catalog__heading">
+      <h2>Знайдіть свою квартиру</h2><a class="text-link catalog__all" href="apartments.html">Усі квартири
+        →</a>
+    </div><button class="button catalog__mobile-filter" data-filter-open>☷ Фільтри</button>
+    <div class="catalog__filters">
+      <div class="catalog__filter-head">
+        <h3>Фільтри</h3><button class="catalog__close" aria-label="Закрити фільтри">✕</button>
+      </div>
+      <div class="catalog__rooms" role="group" aria-label="Кількість кімнат"><button
+          class="catalog__chip catalog__chip--active" data-rooms="all" aria-pressed="true">Усі</button><button
+          class="catalog__chip" data-rooms="1" aria-pressed="false">1-кімнатні</button><button
+          class="catalog__chip" data-rooms="2" aria-pressed="false">2-кімнатні</button></div>
+      <div class="catalog__range"><label class="field">Площа від, м²<input type="number" min="0" step="0.1"
+            data-area-min placeholder="Від"></label><label class="field">До, м²<input type="number" min="0"
+            step="0.1" data-area-max placeholder="До"></label></div><label
+        class="field catalog__floor">Поверх<select aria-label="Поверх" disabled title="Дані про поверхи ще не додано">
+          <option>Уточнюється</option>
+        </select></label><button class="button catalog__apply">Показати квартири</button><button
+        class="text-link catalog__reset" type="button">Скинути фільтри</button>
+    </div>
+    <div class="catalog__grid"></div>
+    <p class="catalog__count note" aria-live="polite"></p>
+    <nav class="catalog__pagination" aria-label="Сторінки каталогу"></nav>
+    <p class="note">Демонстраційна добірка. Площі зі схеми поверху; відповідність ілюстрацій, поверхи та
+      наявність уточнюються.</p>
+  </div>
+</section>
