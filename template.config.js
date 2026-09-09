@@ -8,7 +8,7 @@ export default {
 		snippets: true
 	},
 	navpanel: {
-		dev: true,
+		dev: false,
 		build: false,
 		position: 'left',
 		color: '#ffffff',

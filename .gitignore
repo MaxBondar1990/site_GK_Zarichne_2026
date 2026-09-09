@@ -1,1 +1,16 @@
-node_modules
+node_modules/
+
+# Local design mockups and generation notes
+/design/
+
+# Generated build output and caches
+/dist/
+/.vite/
+/.vite-temp/
+
+# Local environment and logs
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store

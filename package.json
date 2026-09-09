@@ -12,7 +12,7 @@
     "zip": "vite build -- --zip",
     "tmp": "vite build -- --tmp --zip",
     "deploy": "vite build -- --ftp",
-	 "add": "node template_modules/createcomponent.js",
+    "add": "node template_modules/createcomponent.js",
     "wp": "node template_modules/wordpress/terminal.js up -d && vite -- --wp",
     "wpbuild": "node template_modules/wordpress/terminal.js up -d && vite build -- --wp",
     "wpstop": "node template_modules/wordpress/terminal.js down"
@@ -26,6 +26,7 @@
     "@vitejs/plugin-vue": "latest",
     "autoprefixer": "latest",
     "cssnano": "latest",
+    "esbuild": "^0.28.2",
     "fontmin": "latest",
     "glob": "latest",
     "gsap": "latest",

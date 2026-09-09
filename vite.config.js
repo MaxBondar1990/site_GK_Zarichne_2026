@@ -49,7 +49,7 @@ const ignoredDirs = ['backend', 'src/files', 'node_modules', 'dist', '.git']
 const ignoredFiles = ['package.json']
 
 import Inspect from 'vite-plugin-inspect'
-import { getDev } from './template_modules/main.js'
+
 
 import logger from "./template_modules/logger.js";
 
@@ -145,7 +145,6 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 					}
 				},
 			},
-			getDev(),
 			...(isInspect ? [Inspect()] : [])
 		],
 		css: {
@@ -168,7 +167,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 			cssMinify: !templateConfig.styles.devfiles,
 			cssCodeSplit: templateConfig.styles.codesplit,
 			rollupOptions: {
-				input: isWp ? ['components/wordpress/fls-theme/assets/app.js'] : globSync('./*.html'),
+				input: isWp ? ['components/wordpress/fls-theme/assets/app.js'] : globSync('src/*.html').map(file => path.resolve(file)),
 				plugins: [
 					templateImports.rollupPlugins
 				],

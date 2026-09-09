@@ -1,32 +1,36 @@
-<template src="@components/templates/main/main.html" locals='{
-		"title":"Max", 
-		"lang":"en",
-		"preloader": {
-			"enable":"false",
-			"once":"false"
-		},
-		"keywords":"", 
-		"description":""
-	}'>
-   <block name="header">
-      <include src="@components/sections/header/header.html" locals='{}'></include>
-   </block>
-   <block name="cover">
-      <include src="@components/sections/cover/cover.html" locals='{}'></include>
-   </block>
-   <block name="Advantages">
-      <include src="@components/sections/Advantages/Advantages.html" locals='{}'></include>
-   </block>
-   <block name="plan">
-      <include src="@components/sections/plan/plan.html" locals='{}'></include>
-   </block>
-   <!-- <block name="main">
-		<include src="@components/pages/home/home.html" locals='{}'></include>
-	</block> -->
-   <block name="footer">
-      <include src="@components/sections/footer/footer.html" locals='{}'></include>
-   </block>
-   <block name="popup">
-
-   </block>HOOY
-</template>
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ЖК Заріччя — свій простір у Березані</title>
+<meta name="description" content="Знайдіть свій простір у ЖК Заріччя. Планування квартир, фото будинку та документи. Березань, вул. Героїв Небесної Сотні, 68.">
+<meta name="theme-color" content="#183f35">
+<link rel="icon" href="./assets/img/full_img/full_S8Hh9oeT.png">
+<link rel="stylesheet" href="./styles/residence.css">
+<script type="module" src="./js/residence.js"></script>
+</head>
+<body>
+<a class="skip" href="#apartments">Перейти до квартир</a>
+<header class="site-header">
+<a class="brand" href="#" aria-label="ЖК Заріччя — головна"><img src="./assets/img/header/full_logo.jpg" alt="" width="54" height="54"><span>Заріччя<small>ЖИТЛОВИЙ КОМПЛЕКС</small></span></a>
+<nav id="navigation" aria-label="Основна навігація"><a href="#about">Про будинок</a><a href="#apartments">Квартири</a><a href="#gallery">Галерея</a><a href="#documents">Документи</a></nav>
+<a class="header-contact" href="#contacts">Записатися на перегляд <span>↗</span></a><button class="menu-toggle" aria-label="Відкрити меню" aria-expanded="false" aria-controls="navigation">☰</button>
+</header>
+<main>
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-copy"><p class="eyebrow"><span class="dot"></span> БЕРЕЗАНЬ · ЖК ЗАРІЧЧЯ</p><h1 id="hero-title">Свій простір.<br>Свій ритм.<br><em>Своє Заріччя.</em></h1><p class="hero-description">Місце для ранкової кави, сімейних вечорів<br class="desktop"> і життя, яке хочеться наповнювати своїм.</p><a class="button primary" href="#apartments">Знайти свою квартиру <span>↗</span></a><div class="hero-bottom"><span>Київська область, м. Березань</span><a href="#about" aria-label="Дізнатися про будинок">Гортайте, щоб дізнатися більше ↓</a></div></div>
+<div class="hero-image"><img src="./assets/img/full_img/full_pRsfLtFA.jpg" alt="Архітектурна візуалізація житлового будинку Заріччя" width="1500" height="844" fetchpriority="high"><span class="image-caption">Архітектурна візуалізація</span><div class="image-note"><span>БЛИЖЧЕ ДО СВОГО</span><strong>Тут починається<br>ваша нова історія.</strong></div></div>
+</section>
+<section class="intro section" id="about"><div><p class="eyebrow">01 / ПРО БУДИНОК</p><h2>Більше місця<br>для <em>звичайного щастя.</em></h2></div><div class="intro-text"><p>Перша власна квартира. Простір для двох. Дім для сім’ї. У «Заріччі» кожна історія починається з вашого вибору.</p><p class="muted">Житловий будинок у Березані, на вулиці Героїв Небесної Сотні, 68. Знайомтеся з плануваннями та уявляйте, яким буде ваш дім.</p><a class="text-link" href="#gallery">Побачити будинок <span>↗</span></a></div></section>
+<section class="facts" aria-label="Проєкт у цифрах"><div><strong>01</strong><span>житловий будинок</span></div><div><strong>1–2</strong><span>кімнати у плануваннях</span></div><div><strong>34–51,5 <small>м²</small></strong><span>площі за наданою схемою</span></div><div><strong>Ваш</strong><span>простір для нового життя</span></div></section>
+<section class="apartments section" id="apartments"><div class="section-heading"><div><p class="eyebrow">02 / ОБРАТИ КВАРТИРУ</p><h2>Знайдіть <em>свою.</em></h2></div><p class="muted">Почніть із планування.<br>Деталі обговоримо на перегляді.</p></div><div class="catalog-controls"><div class="filters" role="group" aria-label="Кількість кімнат"><button class="selected" data-filter="all" aria-pressed="true">Усі квартири</button><button data-filter="1" aria-pressed="false">1-кімнатні</button><button data-filter="2" aria-pressed="false">2-кімнатні</button></div><label class="sort-label">Сортувати <select id="sort"><option value="asc">Площа: від меншої</option><option value="desc">Площа: від більшої</option></select></label></div><p class="catalog-note">Демонстраційна добірка · Площі взято зі схеми поверху. Відповідність ілюстрацій, ціни та наявність уточнюються.</p><div class="apartment-grid" id="apartment-grid"></div><p id="catalog-count" class="muted" aria-live="polite"></p><div class="floor-banner"><div><p class="eyebrow">ПОБАЧТЕ ПОВНУ КАРТИНУ</p><h3>Де буде ваша квартира?</h3><p>Розташування квартир і спільного простору на схемі поверху.</p></div><button class="button outline" data-view="floor">Переглянути поверх ↗</button></div></section>
+<section class="lifestyle section"><div class="lifestyle-photo"><img src="./assets/img/Advantages/full_lis.jpg" alt="Ілюстрація зеленого лісу" loading="lazy" width="1280" height="847"><span class="image-caption">Атмосферна ілюстрація</span></div><div class="lifestyle-copy"><p class="eyebrow">03 / ЖИТТЯ У ВЛАСНОМУ РИТМІ</p><h2>Дім — це більше,<br>ніж <em>квадратні метри.</em></h2><p class="muted">Концепція переваг · демонстраційне наповнення</p><article><span>01</span><div><h3>Ранок без поспіху</h3><p>Простір, у якому є час на себе, сніданок разом і плани на новий день.</p></div></article><article><span>02</span><div><h3>Місце для вашого життя</h3><p>Уявіть затишний куточок для читання, робочий стіл біля вікна та вечори з близькими.</p></div></article><article><span>03</span><div><h3>Свобода облаштувати по-своєму</h3><p>Власна палітра, улюблені матеріали та деталі, що перетворюють квартиру на дім.</p></div></article></div></section>
+<section class="gallery section" id="gallery"><div class="section-heading"><div><p class="eyebrow">04 / ПОЗНАЙОМТЕСЯ БЛИЖЧЕ</p><h2>Заріччя <em>в деталях.</em></h2></div><div class="gallery-controls"><button id="gallery-prev" aria-label="Попереднє зображення">←</button><button id="gallery-next" aria-label="Наступне зображення">→</button></div></div><button class="gallery-stage" id="gallery-open" aria-label="Збільшити зображення"><img id="gallery-image" src="./assets/img/full_img/full_MvuAnuVh.jpeg" alt="Фото фасаду будинку з наданого архіву" width="1500" height="1000" loading="lazy"><span class="zoom-hint">Збільшити ↗</span></button><div class="gallery-footer"><p id="gallery-caption">Фасад будинку · фото з архіву</p><span id="gallery-count" aria-live="polite">01 / 05</span></div><p class="muted small">Архівні фотографії не визначають поточний стан готовності будинку.</p></section>
+<section class="location section" id="location"><div><p class="eyebrow">05 / РОЗТАШУВАННЯ</p><h2>Ваша адреса<br><em>нового початку.</em></h2><p>Київська область, м. Березань<br>вул. Героїв Небесної Сотні, 68</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Березань+Героїв+Небесної+Сотні+68" target="_blank" rel="noopener noreferrer">Відкрити на Google Maps ↗</a></div><img src="./assets/img/footer/full_google_mitka.jpg" alt="Орієнтовне розташування на карті Березані" width="1086" height="836" loading="lazy"></section>
+<section class="documents section" id="documents"><div class="section-heading"><div><p class="eyebrow">06 / ДОКУМЕНТИ</p><h2>Важливе — <em>відкрито.</em></h2></div><p class="muted">Надані сторінки документів.<br>Повні комплекти та актуальність уточнюються.</p></div><button class="document-row" data-view="permit"><span class="doc-icon">↗</span><span><strong>Дозвіл на будівництво</strong><small>29.07.2020 · надано сторінку 1 із 5</small></span><span>Переглянути ↗</span></button><button class="document-row" data-view="expert"><span class="doc-icon">↗</span><span><strong>Експертний звіт</strong><small>2019 рік · будинок №1, перша черга · надана сторінка</small></span><span>Переглянути ↗</span></button></section>
+<section class="contact section" id="contacts"><div><p class="eyebrow">ЗРОБІМО ПЕРШИЙ КРОК</p><h2>Ваш дім<br><em>починається<br>зі знайомства.</em></h2><p>Оберіть планування, яке вам до душі,<br>і залиште побажання до перегляду.</p><p class="contact-placeholder">Контакти відділу продажу незабаром</p></div><form id="contact-form"><h3>Познайомимося?</h3><p class="form-note">Демонстраційна форма: дані не надсилаються й не зберігаються.</p><label>Ваше ім’я<input name="name" autocomplete="given-name" required maxlength="80" placeholder="Як до вас звертатися?"></label><label>Номер телефону<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required pattern="[+0-9() \-]{10,24}" maxlength="24" placeholder="+380 __ ___ __ __"></label><label>Що вас цікавить?<select name="interest" id="interest"><option>Допоможіть обрати квартиру</option><option>1-кімнатна квартира</option><option>2-кімнатна квартира</option></select></label><input type="hidden" name="apartment" id="selected-apartment"><p id="selected-apartment-label" class="form-note" hidden></p><button class="button light" type="submit">Спробувати запис на перегляд ↗</button><p id="form-status" role="status"></p></form></section>
+</main>
+<footer class="site-footer"><a class="footer-brand" href="#">Заріччя<span>ПРОСТІР ДЛЯ ВАШОГО ЖИТТЯ</span></a><p>© <span id="year">2026</span> ЖК Заріччя</p><p>Демонстраційна версія<br>Умови продажу уточнюються</p><a href="#">Нагору ↑</a></footer>
+<a class="mobile-viewing" href="#contacts">Записатися на перегляд <span aria-hidden="true">↗</span></a>
+<dialog id="viewer" aria-labelledby="viewer-title"><div class="dialog-head"><h2 id="viewer-title">Планування</h2><button class="close-dialog" aria-label="Закрити">✕</button></div><div id="viewer-content"></div></dialog>
+</body></html>
