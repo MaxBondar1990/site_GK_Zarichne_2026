@@ -50,7 +50,7 @@ export default {
 			modernformat: {
 				enable: true,
 				type: 'webp', // webp/avif
-				only: true,
+				only: false,
 				quality: 80
 			},
 			jpeg: {
