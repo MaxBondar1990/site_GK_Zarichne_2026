@@ -1,4 +1,5 @@
 import './catalog.scss';
+import { animateCards } from '../../../js/common/card-motion.js';
 import {
   apartments,
   card
@@ -21,6 +22,7 @@ function render() {
   root.querySelector('.catalog__grid').innerHTML = list.length ? list.slice((page - 1) * size, page * size)
     .map(card).join('') :
     '<p class="empty-state">За цими параметрами планувань немає. Спробуйте іншу площу або скиньте фільтри.</p>';
+  animateCards(root.querySelector('.catalog__grid'));
   root.querySelector('.catalog__count').textContent = `Знайдено планувань: ${list.length}`;
   root.querySelector('.catalog__pagination').innerHTML = Array.from({
     length: pages

@@ -69,7 +69,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 		base: templateConfig.server.path,
 		assetsInclude: ['src/components/**/*.html'],
 		clearScreen: false,
-		root: path.join(__dirname, "src"),
+		root: path.join(import.meta.dirname, "src"),
 		customLogger: viteLogger,
 		logLevel: "silent",
 		publicDir: false,
@@ -151,7 +151,6 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 			devSourcemap: true,
 			preprocessorOptions: {
 				scss: {
-					silenceDeprecations: ["mixed-decls"],
 					additionalData: '@use "@styles/includes/index.scss" as *;',
 					sourceMap: true,
 					quietDeps: true,
@@ -160,7 +159,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
 			},
 		},
 		build: {
-			outDir: isWp ? path.join(__dirname, "src/components/wordpress/fls-theme/assets/build") : path.join(__dirname, "dist"),
+			outDir: isWp ? path.join(import.meta.dirname, "src/components/wordpress/fls-theme/assets/build") : path.join(import.meta.dirname, "dist"),
 			emptyOutDir: true,
 			manifest: false,
 			minify: !templateConfig.js.devfiles,

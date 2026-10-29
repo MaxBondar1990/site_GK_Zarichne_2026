@@ -1,0 +1,201 @@
+html{scroll-behavior:smooth;scroll-padding-top:110px}.residence{--radius:24px}.residence__container{max-width:1480px;padding-inline:48px}.kicker{font-size:11px;letter-spacing:.16em;font-weight:700;margin-bottom:28px}.residence h2{font-size:clamp(32px,4vw,60px);font-weight:500;line-height:1.12}.intro{margin:14px 20px 0;border-radius:28px;position:relative;min-height:720px;height:calc(100svh - 120px);max-height:1050px;overflow:hidden;background:var(--green);color:white}.intro__image,.intro__shade{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.intro__shade{background:linear-gradient(90deg,#26320fc9,transparent 90%),linear-gradient(0deg,#26320f80,transparent 65%)}.intro__top{position:relative;display:flex;justify-content:space-between;padding:32px 44px;font-size:10px;letter-spacing:.15em}.intro__content{position:absolute;left:5%;bottom:19%;max-width:950px}.intro h1{font-size:clamp(48px,6.8vw,104px);color:white;line-height:1.04;font-weight:500;letter-spacing:-.055em}.intro__content>p:not(.kicker){font-size:18px;line-height:1.7;margin:28px 0}.intro .button{background:var(--paper);color:var(--green);border:0;min-width:240px;justify-content:space-between;min-height:60px}.intro__scroll{position:absolute;bottom:45px;left:5%;font-size:12px;display:flex;gap:50px;align-items:center}.intro__scroll span{font-size:25px}.intro__card{position:absolute;right:35px;bottom:35px;border-radius:18px;background:var(--paper);color:var(--green);padding:26px 80px 24px 26px}.intro__card .kicker{font-size:9px}.intro__card p{font-size:21px;line-height:1.35;margin:10px 0}.intro__card a{position:absolute;right:24px;bottom:28px;font-size:32px}.intro__caption{position:absolute;right:28px;top:80px;opacity:.7;font-size:10px}.story,.life,.trust{padding-block:110px}.section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:48px}.section-heading h2{margin:0}.section-heading p{font-size:15px;max-width:420px;color:var(--muted);margin-bottom:4px}.story__grid{display:grid;grid-template-columns:.8fr 1fr 1fr;gap:20px}.story__feature{padding:36px;background:var(--sage);border-radius:var(--radius);display:flex;flex-direction:column;align-items:flex-start}.story__feature>span{font-size:12px;margin-bottom:55px}.story__feature h3{font-size:36px;font-weight:500}.story__feature p{font-size:14px;color:var(--muted)}.story__feature a{margin-top:auto}.image-tile{position:relative;min-height:360px;border-radius:var(--radius);overflow:hidden;background:var(--sage)}.image-tile img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.image-tile:hover img{transform:scale(1.04)}.image-tile:after{content:'';position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#26320fb0)}.image-tile span{position:absolute;bottom:28px;left:28px;color:white;font-size:19px;z-index:1}.selection{background:var(--green-soft);padding:95px 0}.chooser{border-radius:var(--radius);overflow:hidden;background:var(--paper);border:1px solid var(--divider)}.chooser__toolbar{padding:18px 22px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.chooser__toolbar>span{font-size:10px;letter-spacing:.12em;color:var(--muted)}.view-tabs{display:flex;gap:6px}.view-tabs button{padding:14px 24px;border:0;border-radius:10px;background:transparent;color:var(--green);font-size:13px}.view-tabs button[aria-pressed=true]{background:var(--green);color:white}.chooser__body{display:grid;grid-template-columns:260px 1fr}.chooser__filters{padding:32px 24px;border-right:1px solid var(--line)}.chooser__filters h3{font-size:19px;letter-spacing:-.02em;margin-bottom:30px}.filter-label{display:block;font-size:10px;letter-spacing:.1em;margin:24px 0 14px}.room-options{display:flex;gap:8px}.room-options button{border:1px solid var(--control-border);background:transparent;border-radius:8px;min-width:46px;min-height:44px;color:var(--green)}.room-options button[aria-pressed=true]{background:var(--green);color:white}.chooser input[type=range]{width:100%;accent-color:var(--green)}.range-ends{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:8px}.chooser__reset{background:none;border:0;padding:25px 0;color:var(--muted);font-size:12px}.chooser__count{font-size:13px;font-weight:700}.chooser__stage{min-width:0}.building-view{position:relative;min-height:530px;height:100%;overflow:hidden;background:var(--sage)}.building-view>img{width:100%;height:100%;position:absolute;object-fit:cover}.building-view:after{content:'';position:absolute;inset:55% 0 0;background:linear-gradient(transparent,#26320fad);pointer-events:none}.building-view__label{position:absolute;top:30px;left:30px;padding:16px 22px;background:var(--paper);border-radius:12px;color:var(--green);font-size:21px}.building-view__label small{display:block;font-size:10px;margin-top:5px}.building-view__compass{position:absolute;top:30px;right:30px;border:1px solid #fff8;border-radius:50%;padding:15px;color:white;font-size:24px}.building-view__plans{position:absolute;bottom:24px;left:24px;right:24px;display:flex;gap:8px;flex-wrap:wrap;z-index:1}.building-view__plans button{flex:1;min-width:100px;padding:15px 12px;background:var(--paper);border:0;color:var(--green);border-radius:12px;text-align:left;transition:transform .2s}.building-view__plans button:hover{transform:translateY(-5px)}.building-view__plans span{display:block;font-size:10px}.building-view__plans strong{display:block;font-size:22px;margin:8px 0}.plans-view{padding:22px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-height:650px;overflow:auto}.plan-preview{background:white;border:1px solid var(--line);border-radius:14px;padding:18px;color:var(--green);text-align:left}.plan-preview img{width:100%;height:160px;object-fit:contain;margin-bottom:20px}.plan-preview strong,.plan-preview span{display:block;font-size:12px;margin-top:10px}.plan-preview span{color:var(--muted);font-size:11px}.chooser__empty{padding:20px;background:var(--paper);border-radius:12px}.life__grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}.life__card{padding:30px;background:#fff9;border:1px solid var(--line);border-radius:var(--radius)}.life__card>span{font-size:9px;letter-spacing:.12em;color:var(--muted)}.life__card h3{font-size:30px;font-weight:500;margin-top:20px}.life__card img{width:100%;height:240px;object-fit:contain;mix-blend-mode:multiply;margin:25px 0}.life__card>div{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:24px}.life__card b{font-size:23px}.life__invitation{padding:35px;background:var(--green);color:var(--paper);border-radius:var(--radius);display:flex;flex-direction:column;align-items:flex-start}.life__invitation h3{color:var(--paper);font-size:45px;font-weight:500}.life__invitation p{font-size:14px;opacity:.75}.life__invitation .button{background:var(--sage);color:var(--green);margin-top:auto}.location-band{display:grid;grid-template-columns:1fr 1fr;background:var(--sage);margin:0 20px;border-radius:28px;overflow:hidden}.location-band>img{width:100%;height:100%;max-height:580px;object-fit:cover}.location-band>div{padding:70px 65px}.location-band p{font-size:14px}.trust__links a{display:flex;gap:30px;padding:28px 4px;border-bottom:1px solid var(--line);font-size:23px;color:var(--green);align-items:center}.trust__links span{font-size:11px;color:var(--muted)}.trust__links b{margin-left:auto;font-size:30px;font-weight:400}.contact-panel{display:flex;justify-content:space-between;align-items:center;gap:30px;padding-block:65px;border-top:1px solid var(--line)}.contact-panel .button{min-width:280px;min-height:60px}.contact-panel>div>p:not(.kicker){font-size:14px}.plan-detail{border:0;border-radius:24px;background:var(--paper);padding:50px;width:min(1000px,92vw);max-height:90dvh;color:var(--green)}.plan-detail::backdrop{background:#26320faa;backdrop-filter:blur(5px)}.plan-detail__close{position:absolute;right:18px;top:18px;width:44px;height:44px;background:var(--sage);border:0;border-radius:50%}.plan-detail__body{display:grid;grid-template-columns:1.2fr 1fr;gap:45px;align-items:center}.plan-detail__body>img{width:100%;max-height:60vh;object-fit:contain;mix-blend-mode:multiply}.plan-detail h2{font-size:42px}
+@media(min-width:1700px){.intro__content{bottom:22%}}
+@media(max-width:1100px){.residence__container{padding-inline:30px}.story__grid{grid-template-columns:1fr 1fr}.story__feature{grid-column:1/-1}.story__feature>span{margin-bottom:20px}.life__grid{grid-template-columns:1fr 1fr}.life__invitation{grid-column:1/-1;min-height:330px}.chooser__body{grid-template-columns:220px 1fr}.plans-view{grid-template-columns:repeat(2,minmax(0,1fr))}.intro__card{max-width:270px}.intro__content{bottom:27%}.section-heading p br{display:none}.location-band>div{padding:40px}}
+@media(max-width:700px){.residence__container{padding-inline:22px}.intro{margin:8px 10px 0;border-radius:20px;min-height:700px;height:calc(100svh - 90px);max-height:850px}.intro__image{object-position:60%}.intro__shade{background:linear-gradient(0deg,#26320fdf, #26320f30)}.intro__top{padding:25px;font-size:9px}.intro__top span:last-child{display:none}.intro__content{left:25px;right:20px;bottom:185px}.intro h1{font-size:clamp(40px,9vw,64px)}.intro__content>p:not(.kicker){font-size:14px}.intro .kicker{font-size:9px}.intro__card{left:25px;right:25px;bottom:25px;max-width:none;padding:18px 65px 18px 20px}.intro__card .kicker{margin:0}.intro__card p{font-size:17px}.intro__scroll,.intro__caption{display:none}.story,.life,.trust{padding-block:65px}.section-heading{display:block;margin-bottom:30px}.section-heading p,.section-heading>a{margin-top:25px}.story__grid{grid-template-columns:1fr;gap:14px}.story__feature{padding:28px}.image-tile{height:320px;min-height:0}.selection{padding:60px 0}.chooser__toolbar{padding:12px}.chooser__toolbar>span{display:none}.view-tabs{width:100%}.view-tabs button{flex:1;padding:13px 10px}.chooser__body{grid-template-columns:1fr}.chooser__filters{padding:20px;border-right:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}.chooser__filters h3{grid-column:1/-1;margin:0 0 8px}.chooser__filters .filter-label{margin:8px 0;font-size:9px}.room-options{grid-column:1;grid-row:3}.chooser__filters label{grid-column:2;grid-row:2}.chooser input[type=range]{grid-column:2;grid-row:3}.range-ends{grid-column:2;margin:0}.chooser__reset{padding:8px 0;text-align:left}.chooser__count{margin:8px 0;font-size:11px}.chooser__filters .note{grid-column:1/-1;margin:0}.chooser__filters .text-link{font-size:12px}.building-view{min-height:480px}.building-view>img{object-position:60%}.building-view__plans{left:14px;right:14px;bottom:14px}.building-view__plans button{min-width:90px}.building-view__label{top:18px;left:18px}.plans-view{padding:12px;gap:10px}.plan-preview{padding:12px}.plan-preview img{height:130px}.life__grid{grid-template-columns:1fr}.life__invitation{grid-column:auto;min-height:400px}.life__card img{height:240px}.location-band{grid-template-columns:1fr;margin:0 10px}.location-band>img{height:260px}.location-band>div{padding:35px 25px}.trust__links a{font-size:17px;gap:18px}.contact-panel{display:block;padding-block:40px}.contact-panel>div+div{margin-top:30px}.contact-panel .button{width:100%;min-width:0}.plan-detail{padding:65px 24px 25px}.plan-detail__body{grid-template-columns:1fr;gap:20px}.plan-detail__body>img{max-height:40vh}.plan-detail h2{font-size:32px}}
+
+// Leave room for the floating glass header without moving the banner below it.
+.intro { height: calc(100svh - 28px); }
+.intro__top { padding-top: 132px; }
+.intro__caption { top: 158px; }
+@media (max-width: 700px) {
+  .intro { height: calc(100svh - 16px); }
+  .intro__top { padding-top: 110px; }
+}
+
+// Current guide: olive and sage, green and ochre surfaces, selective campaign accents.
+.residence h2, .residence h3 { color: var(--text); }
+.residence .kicker { color: var(--earth); }
+.residence .intro .kicker { color: var(--on-dark); }
+.residence .intro__shade {
+  background: linear-gradient(90deg, #26320f80 0%, #26320f40 35%, transparent 72%),
+    linear-gradient(0deg, #26320f33, transparent 45%);
+}
+.residence .intro .intro__content > .button {
+  background: var(--button-primary-bg); color: var(--button-primary-text);
+  border: 1px solid #ffffff55;
+  box-shadow: 0 8px 24px #26320f33;
+  &:hover { background: var(--button-primary-hover); }
+  &:active { background: var(--button-primary-active); }
+}
+.residence .intro__card {
+  background: var(--accent-ochre); color: var(--on-accent-ochre);
+  box-shadow: var(--shadow-floating);
+  .kicker { color: var(--on-accent-ochre); }
+  a { color: var(--on-accent-ochre); }
+}
+.residence .story__feature {
+  background: var(--sage); color: var(--on-sage);
+  h3, p, a { color: var(--on-sage); }
+  > span { color: var(--on-sage); }
+}
+.residence .image-tile:after {
+  background: linear-gradient(transparent, #26320fd9);
+}
+.residence .selection {
+  background: var(--brand);
+  margin-inline: 20px;
+  border-radius: 28px;
+  > .residence__container > .kicker,
+  .section-heading h2, .section-heading p { color: var(--on-brand); }
+}
+.residence .chooser {
+  background: var(--surface); border-color: #ffffff55;
+  box-shadow: 0 24px 60px #26320f29;
+}
+.residence .chooser__toolbar { background: var(--surface-olive); }
+.residence .chooser__filters { background: var(--surface); }
+.residence .view-tabs button { color: var(--text); }
+.residence .view-tabs button[aria-pressed=true],
+.residence .room-options button[aria-pressed=true] {
+  background: var(--brand); color: var(--on-brand);
+}
+.residence .chooser input[type=range] { accent-color: var(--accent); }
+.residence .chooser__count { color: var(--brand); }
+.residence .building-view__label { background: var(--surface); color: var(--text); }
+.residence .building-view__plans button {
+  background: var(--surface); color: var(--text); border-top: 4px solid var(--brand);
+}
+.residence .plan-preview { background: var(--surface); color: var(--text); }
+.residence .life__card {
+  background: var(--surface); border: 1px solid var(--divider);
+  border-top: 5px solid var(--brand); box-shadow: var(--shadow-card);
+  > span { color: var(--brand); }
+  > div b { color: var(--accent); }
+}
+.residence .life__card:nth-child(2) {
+  background: var(--surface-olive); border-top-color: var(--brand);
+  > span { color: var(--brand); }
+}
+.residence .life__invitation {
+  background: var(--accent); color: var(--on-accent);
+  .kicker, h3, p { color: var(--on-accent); }
+  p { opacity: 1; }
+  .button { background: var(--button-primary-bg); color: var(--button-primary-text); border: 1px solid #ffffff66; }
+  .button:hover { background: var(--button-primary-hover); }
+  .button:active { background: var(--button-primary-active); }
+}
+.residence .location-band {
+  background: var(--surface-earth);
+  h2, .kicker { color: var(--earth); }
+  .button--outline { border-color: var(--earth); color: var(--earth); }
+  .button--outline:hover { background: var(--earth); color: var(--on-earth); }
+}
+.residence .trust__links a {
+  color: var(--text); transition: background 200ms ease, padding 200ms ease;
+  b { color: var(--accent); }
+  &:hover { background: var(--surface-plum); padding-inline: 18px; }
+}
+.residence .contact-panel {
+  width: calc(100% - 40px); max-width: 1384px;
+  margin: 0 auto 40px; border: 0; border-radius: 28px;
+  padding: 60px 48px; background: var(--surface-earth);
+  h2 { color: var(--earth); }
+  .button {
+    background: var(--accent); color: var(--on-accent); border-color: var(--accent);
+    &:hover { background: var(--accent-hover); }
+    &:active { background: var(--accent-active); }
+  }
+}
+.residence .plan-detail { background: var(--modal-bg); color: var(--text); }
+.residence .plan-detail__close { background: var(--surface-plum); color: var(--accent); }
+@media(max-width:700px) {
+  .residence .selection { margin-inline: 10px; border-radius: 22px; }
+  .residence .contact-panel { width: calc(100% - 20px); padding: 35px 24px; border-radius: 22px; }
+}
+
+// Keep the architectural render bright; contrast is concentrated behind the copy.
+.residence .intro__image { filter: brightness(1.06) saturate(1.08); }
+.residence .intro__content h1,
+.residence .intro__content > p,
+.residence .intro__top,
+.residence .intro__scroll { text-shadow: 0 2px 12px #26320f80; }
+@media(max-width:700px) {
+  .residence .intro__shade {
+    background: linear-gradient(0deg, #26320f73 0%, #26320f59 42%, transparent 85%);
+  }
+}
+
+// Dark green banner gradient, with plum cards and white lettering.
+.residence .intro { background: var(--accent); color: var(--on-accent); }
+.residence .intro__shade {
+  background: linear-gradient(90deg, #26320f80 0%, #26320f40 35%, transparent 72%),
+    linear-gradient(0deg, #26320f33, transparent 45%);
+}
+.residence .intro__content h1,
+.residence .intro__content > p,
+.residence .intro__top,
+.residence .intro__scroll { color: var(--on-accent); }
+.residence .intro__card {
+  background: var(--accent); color: var(--on-accent);
+  .kicker, p, a { color: var(--on-accent); }
+}
+.residence .intro .intro__content > .button {
+  background: var(--button-primary-bg); color: var(--button-primary-text);
+  &:hover { background: var(--button-primary-hover); }
+  &:active { background: var(--button-primary-active); }
+}
+@media(max-width:700px) {
+  .residence .intro__shade {
+    background: linear-gradient(0deg, #26320f73 0%, #26320f59 42%, transparent 85%);
+  }
+}
+
+// Text labels replace decorative arrow-only controls.
+.residence .intro .intro__content > .button { justify-content: center; }
+.residence .intro__card { padding-right: 26px; }
+.residence .intro__card .intro__card-link {
+  position: static; display: inline-block; font-size: 12px;
+  margin-top: 10px; text-decoration: underline; text-underline-offset: 4px;
+}
+
+// Compact lower-left composition leaves the architecture in view.
+.residence .intro__content {
+  left: 48px; bottom: 52px;
+  max-width: min(540px, calc(100% - 470px));
+}
+.residence .intro__content > .kicker { font-size: 10px; letter-spacing: .14em; margin-bottom: 16px; }
+.residence .intro .intro__content h1 {
+  font-size: clamp(36px, 4.2vw, 58px); font-weight: 500;
+  line-height: 1.08; letter-spacing: -.045em; margin-bottom: 18px;
+}
+.residence .intro__content > p:not(.kicker) { font-size: 14px; line-height: 1.7; margin: 0 0 24px; }
+.residence .intro .intro__content > .button { min-height: 52px; min-width: 210px; padding: 14px 24px; }
+@media(max-width:1100px) and (min-width:701px) {
+  .residence .intro__content { left: 30px; bottom: 44px; max-width: calc(100% - 390px); }
+  .residence .intro .intro__content h1 { font-size: clamp(32px, 4.2vw, 46px); }
+  .residence .intro__content > p:not(.kicker) { font-size: 12px; }
+  .residence .intro__content > p br { display: none; }
+}
+@media(max-width:700px) {
+  .residence .intro { min-height: 800px; max-height: none; }
+  .residence .intro__content { left: 25px; right: 25px; bottom: 310px; max-width: none; }
+  .residence .intro .intro__content h1 { font-size: clamp(32px, 7.6vw, 44px); margin-bottom: 14px; }
+  .residence .intro__content > .kicker { font-size: 9px; margin-bottom: 12px; }
+  .residence .intro__content > p:not(.kicker) { font-size: 12px; margin-bottom: 20px; }
+  .residence .intro__content > p br { display: none; }
+}
+
+// New guide: light green and ochre sections with restrained warm accents.
+.residence .story__feature { background: var(--background-green); }
+.residence .story__feature h3, .residence .story__feature p,
+.residence .story__feature a, .residence .story__feature > span { color: var(--text-olive); }
+.residence .location-band { background: var(--background-ochre); }
+.residence .location-band p:not(.kicker) { color: var(--text-sage); }
+.residence .contact-panel { background: var(--accent-terracotta-soft); }
+.residence .contact-panel h2, .residence .contact-panel .kicker { color: var(--accent-terracotta-ink); }
+.residence .contact-panel .button {
+  background: var(--accent-terracotta); border-color: var(--accent-terracotta); color: var(--on-accent-terracotta);
+  &:hover { background: var(--accent-terracotta-hover); border-color: var(--accent-terracotta-hover); }
+  &:active { background: var(--accent-terracotta-active); border-color: var(--accent-terracotta-active); }
+}
+.residence .life__card > div b { color: var(--brand); }

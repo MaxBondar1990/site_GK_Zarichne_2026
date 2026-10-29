@@ -1,0 +1,55 @@
+.residence .intro__card.highlights {
+  width: 360px; max-width: none; padding: 0; right: 36px; bottom: 40px;
+  background: transparent; color: var(--on-accent); border-radius: 22px;
+  box-shadow: var(--shadow-floating); overflow: hidden;
+}
+.highlights {
+  &__track {
+    display: flex; overflow-x: auto; overflow-y: hidden;
+    scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    scrollbar-width: none; border-radius: 22px 22px 0 0;
+    &::-webkit-scrollbar { display: none; }
+  }
+  &__slide {
+    position: relative; flex: 0 0 100%; min-width: 0;
+    scroll-snap-align: start; scroll-snap-stop: always;
+    padding: 28px 28px 24px; min-height: 254px;
+    display: flex; flex-direction: column; align-items: flex-start;
+    &--plum { background: var(--accent); color: var(--on-accent); }
+    &--olive { background: var(--brand); color: var(--on-brand); }
+    &--ochre { background: var(--campaign-bg); color: var(--campaign-text); }
+  }
+  &__eyebrow { font-size: 9px; letter-spacing: .12em; margin-bottom: 20px; padding-right: 20px; }
+  &__number { position: absolute; top: 25px; right: 22px; font-size: 11px; opacity: .7; }
+  &__controls { background: var(--surface); color: var(--text); display: flex; align-items: center; justify-content: space-between; padding: 4px 20px; }
+  &__dots { display: flex; }
+  &__dots button {
+    position: relative; width: 40px; height: 44px; padding: 0;
+    border: 0; background: none; color: var(--accent);
+    &::after { content: ''; position: absolute; top: 18px; left: 15px; width: 9px; height: 9px; border-radius: 50%; background: var(--divider); transition: width 200ms ease, background 200ms ease; }
+    &[aria-current=true]::after { left: 10px; width: 20px; border-radius: 8px; background: var(--accent); }
+  }
+  &__counter { font-size: 10px; letter-spacing: .1em; }
+}
+.residence .intro .highlights__slide h2 { color: inherit; font-size: 25px; font-weight: 500; line-height: 1.2; letter-spacing: -.035em; margin: 0 0 14px; }
+.residence .intro .highlights__slide p { color: inherit; font-size: 12px; line-height: 1.6; margin: 0 0 18px; }
+.residence .intro .highlights__slide a { position: static; color: inherit; font-size: 12px; line-height: 1.4; margin-top: auto; text-decoration: underline; text-underline-offset: 4px; }
+@media(max-width:1100px) {
+  .residence .intro__card.highlights { width: 310px; right: 28px; }
+  .highlights__slide { padding: 25px; }
+  .residence .intro .highlights__slide h2 { font-size: 23px; }
+}
+@media(max-width:700px) {
+  .residence .intro__card.highlights { left: 25px; right: 25px; bottom: 25px; width: auto; }
+  .highlights__slide { min-height: 200px; padding: 22px; }
+  .highlights__eyebrow { margin-bottom: 12px; }
+  .residence .intro .highlights__slide h2 { font-size: 23px; margin-bottom: 10px; }
+  .residence .intro .highlights__slide p { font-size: 11px; margin-bottom: 14px; }
+}
+@media(prefers-reduced-motion:reduce) { .highlights__dots button::after { transition: none; } }
+
+.highlights__rotation {
+  background: none; color: var(--accent); border: 0;
+  padding: 10px; min-height: 44px; font-size: 11px;
+  text-decoration: underline; text-underline-offset: 3px;
+}

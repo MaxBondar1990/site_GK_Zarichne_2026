@@ -1,0 +1,120 @@
+// Terracotta connects actions, measurements, selections and wayfinding.
+body {
+  .accent-metric, .accent-price { color: var(--accent); }
+  .text-link:hover, .navigation__link:hover { color: var(--accent); }
+  .eyebrow { color: var(--text-secondary); }
+  .button:not(.button--outline) { box-shadow: var(--shadow-action); }
+  .button--outline:active { background: var(--accent-soft); color: var(--accent); }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--accent); }
+  .header--overlay.header--scrolled { color: var(--text); }
+  .footer { background: var(--surface-dark); color: var(--on-dark); }
+  .footer__lead h2, .footer__contacts, .footer__bottom,
+  .footer__navigation .navigation__link { color: var(--on-dark); }
+  .footer__eyebrow { color: var(--accent-on-dark); }
+  .footer__bottom a { color: var(--accent-on-dark); }
+  .footer__cta.button { border-color: transparent; }
+}
+
+.image-ribbon {
+  position: absolute; top: 22px; left: 0; z-index: 2;
+  display: inline-block; padding: 9px 15px 9px 20px;
+  border-radius: 0 5px 5px 0; background: var(--accent); color: var(--on-accent);
+  font-size: 10px; font-weight: 700; letter-spacing: .045em;
+}
+body .residence {
+  .kicker { color: var(--text-secondary); }
+  .intro__content > .kicker { color: var(--on-dark); }
+  .intro__image { filter: brightness(1.04) saturate(.92); }
+  .intro__caption { top: 145px; opacity: 1; background: var(--accent); color: var(--on-accent); border-radius: 5px; padding: 8px 12px; }
+  .intro__card.highlights { border: 1px solid #ffffff60; color: var(--text); }
+  .highlights__slide--plum { background: var(--surface); color: var(--text); }
+  .highlights__slide--olive { background: var(--background-green); color: var(--text); }
+  .highlights__slide--ochre { background: var(--background-ochre); color: var(--text); }
+  .intro .highlights__slide a { color: var(--accent-ink); font-weight: 700; }
+  .highlights__number { color: var(--accent); opacity: 1; }
+  .story__feature { background: var(--background-green); }
+  .story__feature .text-link { color: var(--accent-ink); }
+  .image-tile > .image-ribbon { top: 22px; bottom: auto; left: 0; font-size: 10px; }
+  .selection { background: var(--background-green); }
+  .selection > .residence__container > .kicker { color: var(--text-secondary); }
+  .selection .section-heading h2 { color: var(--text); }
+  .selection .section-heading p { color: var(--text-secondary); }
+  .chooser { border-color: var(--divider); box-shadow: var(--shadow-card); }
+  .chooser__toolbar { background: var(--page); }
+  .view-tabs button[aria-pressed=true], .room-options button[aria-pressed=true] { background: var(--accent); color: var(--on-accent); }
+  .chooser__count { color: var(--text); }
+  .chooser input[type=range] { accent-color: var(--accent); }
+  .building-view__plans button { border-top: 3px solid var(--accent); }
+  .building-view__plans strong { color: var(--accent); }
+  .plan-preview { border-color: var(--divider); }
+  .plan-preview .plan-preview__area { color: var(--accent); font-size: 20px; font-weight: 700; }
+  .plan-preview:hover, .plan-preview:focus-visible { border-color: var(--accent); }
+  .life__card, .life__card:nth-child(2) { border-top: 1px solid var(--divider); background: var(--surface); }
+  .life__card > span, .life__card:nth-child(2) > span { color: var(--text-secondary); }
+  .life__card > div, .life__area { color: var(--accent); font-size: 23px; font-weight: 600; }
+  .life__invitation { background: var(--background-green); color: var(--text); }
+  .life__invitation .kicker, .life__invitation h3, .life__invitation p { color: var(--text); }
+  .location-band { background: var(--surface-earth); }
+  .location-band h2, .location-band .kicker { color: var(--text); }
+  .location-band .button--outline { border-color: var(--accent); color: var(--accent); }
+  .location-band .button--outline:hover { background: var(--accent); color: var(--on-accent); }
+  .trust__links a:hover { background: var(--accent-soft); }
+  .contact-panel { background: var(--surface-earth); }
+  .contact-panel h2 { color: var(--text); }
+  .contact-panel .kicker { color: var(--text-secondary); }
+  .plan-detail { color: var(--text); }
+  .plan-detail h2 { color: var(--text); }
+  .plan-detail__area { color: var(--accent); }
+}
+body .features {
+  .feature-tile--intro .feature-tile__surface { background: var(--surface-earth); }
+  .feature-tile--intro .text-link { color: var(--accent-ink); }
+  .feature-tile--olive .feature-tile__surface { background: var(--background-green); color: var(--text); }
+  .feature-tile--ochre .feature-tile__surface { background: var(--surface); color: var(--text); }
+  .feature-tile--plum .feature-tile__surface { background: var(--surface-earth); color: var(--text); }
+  .feature-tile__number { color: var(--accent); }
+  .feature-tile__toggle b { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .feature-tile__detail a { font-weight: 700; }
+}
+body .catalog {
+  .catalog__chip, .catalog__pagination button { background: var(--surface-olive); color: var(--text); }
+  .catalog__chip--active, .catalog__pagination button[aria-current=page] { background: var(--accent); color: var(--on-accent); }
+}
+body .apartment-card {
+  .apartment-card__picture { position: relative; background: var(--surface); }
+  .apartment-card__area { color: var(--listing-price); font-size: 25px; font-weight: 700; letter-spacing: -.035em; margin: 12px 0; }
+  .apartment-card__area small { font-size: 16px; font-weight: 500; }
+  .apartment-card__title { color: var(--text); }
+  .apartment-card__body > .text-link { color: var(--accent-ink); }
+}
+body .apartment {
+  .apartment__summary { background: var(--surface-olive); }
+  .apartment__list dd.accent-metric { color: var(--accent); font-size: 22px; }
+  .apartment__list dd.accent-price { color: var(--accent); }
+  .apartment__tabs button { background: var(--surface-olive); color: var(--text); }
+  .apartment__tabs button[aria-pressed=true] { background: var(--accent); color: var(--on-accent); }
+  .apartment__interior { background: var(--surface-earth); }
+}
+body .location {
+  .location__tabs button { background: var(--surface-olive); color: var(--text); }
+  .location__tabs button[aria-pressed=true] { background: var(--accent); color: var(--on-accent); }
+  .location__place { position: relative; padding-left: 20px; }
+  .location__place::before { content: ''; position: absolute; top: 25px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+}
+.plan-illustration {
+  position: relative; width: 100%; min-width: 0; background: var(--surface);
+  border: 1px solid var(--divider); border-radius: 16px; overflow: hidden;
+  &__area { position: absolute; top: 14px; left: 14px; padding: 9px 13px; border-radius: 6px; background: var(--accent); color: var(--on-accent); font-size: 15px; font-weight: 700; z-index: 2; }
+  &__canvas { position: relative; }
+  .apartment__plan { width: 100%; height: auto; max-height: none; padding: 0; border: 0; border-radius: 0; object-fit: contain; }
+  &__zones { position: absolute; inset: 0; width: 100%; height: 100%; }
+  [data-plan-zone] { fill: transparent; stroke: transparent; stroke-width: 4px; cursor: pointer; transition: fill 180ms ease; }
+  [data-plan-zone]:hover, [data-plan-zone]:focus-visible { fill: color-mix(in srgb, var(--accent) 16%, transparent); stroke: var(--accent); outline: none; }
+  [data-plan-zone][aria-pressed=true] { fill: color-mix(in srgb, var(--accent) 24%, transparent); stroke: var(--accent); }
+  &__hint { margin: 0; border-top: 1px solid var(--divider); padding: 12px 16px; color: var(--accent-ink); font-size: 11px; }
+}
+@media(prefers-reduced-motion:reduce) { .plan-illustration [data-plan-zone] { transition: none; } }
+
+body .apartment-card .apartment-card__price { color: var(--listing-price); font-size: 15px; font-weight: 700; margin-top: 12px; }
+body .apartment-card .apartment-card__price > span { color: var(--text-secondary); font-size: 12px; font-weight: 400; margin-right: 8px; }
+

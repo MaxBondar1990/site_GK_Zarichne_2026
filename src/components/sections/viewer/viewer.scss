@@ -52,3 +52,5 @@
     margin: 10px 0 0
   }
 }
+
+@media(max-width:600px) { .viewer__actions { flex-wrap: wrap; justify-content: center; } }

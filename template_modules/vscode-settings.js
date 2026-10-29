@@ -18,7 +18,12 @@ export default function generateConfigFiles() {
 		}, {}),
 	}
 	const componentSettings = { "viteHtmlComponentCreator.defaultImports": { "html_imports": [`<link rel='stylesheet' href='${getKeyByValue(aliases, 'src/components')}/{component}/{component}.scss'>`], "scss_imports": [""] } }
-	const vscodeSettings = Object.assign(componentSettings, aliasesSettings)
+	// Preserve workspace preferences (including the project Node terminal).
+	const settingsPath = path.resolve('.vscode/settings.json')
+	const existingSettings = fs.existsSync(settingsPath)
+		? JSON.parse(fs.readFileSync(settingsPath, 'utf-8'))
+		: {}
+	const vscodeSettings = Object.assign({}, existingSettings, componentSettings, aliasesSettings)
 
 	!fs.existsSync('.vscode') ? fs.mkdirSync('.vscode') : null
 	fs.writeFileSync(path.resolve('.vscode/settings.json'), JSON.stringify(vscodeSettings, null, 2))

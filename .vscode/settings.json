@@ -16,5 +16,16 @@
     "@video": "${folder}/src/assets/video",
     "@files": "${folder}/src/files",
     "@pug": "${folder}/src/pug"
-  }
+  },
+  "terminal.integrated.profiles.osx": {
+    "Zarichchia · Node 24": {
+      "path": "/bin/bash",
+      "args": [
+        "--rcfile",
+        "${workspaceFolder}/.vscode/project-shell.bash",
+        "-i"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "Zarichchia · Node 24"
 }

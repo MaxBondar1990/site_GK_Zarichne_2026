@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
+@import './palette.css';
+
 :root {
-  --paper: #f5f3ed;
-  --green: #173f35;
-  --sage: #dde5da;
-  --text: #262d29;
-  --muted: #66716c;
-  --line: #dedfd8;
+  --paper: var(--page);
+  --green: var(--green-text);
+  --muted: var(--text-muted);
+  --line: var(--divider);
   --white: #fff;
   font-family: Manrope, Arial, sans-serif;
   color: var(--text);
@@ -59,7 +59,7 @@ p {
 h1,
 h2,
 h3 {
-  color: var(--green);
+  color: var(--text);
   line-height: 1.15;
   letter-spacing: -.04em
 }
@@ -91,7 +91,7 @@ a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #7f9949;
+  outline: 2px solid var(--focus);
   outline-offset: 4px
 }
 
@@ -124,16 +124,16 @@ textarea:focus-visible {
   min-height: 48px;
   padding: 13px 24px;
   border-radius: 9px;
-  border: 1px solid var(--green);
-  background: var(--green);
-  color: white;
+  border: 1px solid var(--button-primary-bg);
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
   transition: background .2s;
 
   &:hover {
-    background: #28574a
+    background: var(--button-primary-hover)
   }
 
   &--outline {
@@ -149,7 +149,7 @@ textarea:focus-visible {
 .eyebrow {
   font-size: 12px;
   letter-spacing: 2px;
-  color: #4c725e;
+  color: var(--green-text);
   margin-bottom: 17px
 }
 
@@ -272,3 +272,12 @@ textarea:focus-visible {
     animation: none !important
   }
 }
+
+.button:active { background: var(--button-primary-active); }
+.button--outline { border-color: var(--button-secondary-border); color: var(--button-secondary-text); }
+.field input, .field select, .field textarea { border-color: var(--input-border); }
+.field input::placeholder, .field textarea::placeholder { color: var(--input-placeholder); }
+.text-link:hover { color: var(--link-hover); }
+
+/* Base reading colors from the current guide. */
+.field input, .field select, .field textarea { background: var(--input-bg); color: var(--input-text); }

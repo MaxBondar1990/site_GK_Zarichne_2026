@@ -130,3 +130,78 @@
     font-size: 17px
   }
 }
+.header{border:0;background:#f7f6f2f5;backdrop-filter:blur(16px)}.header__container{max-width:1480px;min-height:90px;padding-inline:48px}.brand__prefix{font-size:8px;letter-spacing:.13em;margin-bottom:5px}.brand__name{font-size:29px;font-weight:600}.brand__image{width:40px;height:40px}.navigation__link{font-size:12px}.header__action{border-radius:10px;padding:15px 24px;font-size:12px}.header__navigation{margin-right:8px}
+@media(max-width:760px){.header__container{padding-inline:24px;min-height:76px}.brand__name{font-size:24px}.brand__prefix{font-size:7px}.header__navigation{margin:0}.navigation__link{font-size:16px}}
+
+// An independent glass tile, inset from the banner edges.
+.header--overlay {
+  position: sticky;
+  top: 20px;
+  margin: 34px 40px -118px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, .4);
+  border-radius: 20px;
+  color: #fff;
+  background: rgba(38, 50, 15, .28);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  backdrop-filter: blur(24px) saturate(140%);
+  box-shadow: 0 8px 32px rgba(38, 50, 15, .12), inset 0 1px 0 rgba(255, 255, 255, .18);
+  transition: background 250ms ease, color 250ms ease, box-shadow 250ms ease,
+    margin-left 350ms ease, margin-right 350ms ease;
+
+  .header__container { min-height: 82px; padding-inline: 26px; max-width: none; }
+  .navigation__link:hover, .navigation__link[aria-current=page] { color: #fff; }
+  .header__action { background: var(--paper); color: var(--green); border-color: transparent; }
+  .header__action:hover { background: var(--sage); }
+  .header__toggle span { background: currentColor; }
+
+  &.header--scrolled {
+    margin-inline: 20px;
+    color: var(--green);
+    background: rgba(247, 246, 242, .83);
+    border-color: rgba(255, 255, 255, .65);
+    box-shadow: 0 8px 30px rgba(38, 50, 15, .1);
+    .navigation__link:hover, .navigation__link[aria-current=page] { color: var(--green); }
+    .header__action { background: var(--green); color: #fff; }
+  }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .header--overlay { background: rgba(38, 50, 15, .94); }
+  .header--overlay.header--scrolled { background: var(--paper); }
+}
+@media (max-width: 760px) {
+  .header--overlay {
+    top: 12px;
+    margin: 24px 24px -96px;
+    border-radius: 16px;
+    .header__container { min-height: 70px; padding-inline: 16px; gap: 12px; }
+    .header__navigation {
+      top: calc(100% + 10px);
+      border: 1px solid rgba(255, 255, 255, .5);
+      border-radius: 16px;
+      padding: 18px 24px;
+      color: var(--green);
+      background: rgba(247, 246, 242, .97);
+      box-shadow: 0 12px 32px rgba(38, 50, 15, .15);
+      max-height: calc(100dvh - 140px);
+      overflow-y: auto;
+    }
+    .header__navigation .navigation__link:hover { color: var(--green); }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .header--overlay { transition: none; }
+}
+
+@media (max-width: 700px) {
+  .header--overlay.header--scrolled { margin-inline: 10px; }
+}
+.header .header__action,
+.header.header--overlay .header__action,
+.header.header--overlay.header--scrolled .header__action {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border-color: transparent;
+  &:hover { background: var(--button-primary-hover); }
+  &:active { background: var(--button-primary-active); }
+}

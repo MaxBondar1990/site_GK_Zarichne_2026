@@ -22,3 +22,24 @@ const page = location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.navigation__link').forEach(a => {
   if (a.getAttribute('href') === page) a.setAttribute('aria-current', 'page')
 });
+
+// The landing page header floats inside the banner; inner pages retain their layout.
+if (document.querySelector('.intro')) {
+  const header = document.querySelector('.header');
+  header.classList.add('header--overlay');
+  let framePending = false;
+  const updateHeader = () => {
+    header.classList.toggle('header--scrolled', window.scrollY >= Math.max(0, parseFloat(getComputedStyle(header).marginTop) - parseFloat(getComputedStyle(header).top)));
+    framePending = false;
+  };
+  updateHeader();
+  window.addEventListener('resize', updateHeader, { passive: true });
+  window.addEventListener('scroll', () => {
+    if (framePending) return;
+    framePending = true;
+    requestAnimationFrame(updateHeader);
+  }, { passive: true });
+}
+nav.addEventListener('click', event => {
+  if (event.target.closest('a')) close();
+});

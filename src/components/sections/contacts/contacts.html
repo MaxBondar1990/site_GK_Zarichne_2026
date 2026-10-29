@@ -1,7 +1,7 @@
 <section class="contacts" data-fls-contacts>
   <div class="contacts__container">
     <div class="page-heading">
-      <p class="eyebrow">ЖК ЗАРІЧЧЯ · БЕРЕЗАНЬ</p>
+      <p class="eyebrow">ЗАРІЧНИЙ · БЕРЕЗАНЬ</p>
       <h1>Познайомимося<br>з вашим майбутнім домом</h1>
       <p>Дізнайтеся більше про будинок та оберіть зручний час для перегляду.</p>
     </div>
@@ -39,11 +39,10 @@
             <option>Вечір, 17:00–19:00</option>
           </select></label><label class="field">Коментар<textarea name="comment"
             placeholder="Ваше повідомлення (необов’язково)" maxlength="1000"></textarea></label><button
-          class="button" type="submit">Надіслати заявку ↗</button>
+          class="button" type="submit">Надіслати заявку</button>
         <p class="note">Демонстраційна форма: дані не надсилаються й не зберігаються.</p>
         <p class="contacts__status" role="status"></p>
       </form>
-    </div><img class="location__map" src="@img/footer/full_google_mitka.jpg"
-      alt="Карта розташування будинку в Березані" loading="lazy" width="1086" height="836">
+    </div><include src="@components/sections/address-map/address-map.html"></include>
   </div>
 </section>

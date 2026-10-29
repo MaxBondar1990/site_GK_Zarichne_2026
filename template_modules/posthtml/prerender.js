@@ -2,7 +2,7 @@ import posthtml from 'posthtml'
 import posthtmExpressions from 'posthtml-expressions'
 import posthtmlExtend from './extend.js'
 import posthtmlInclude from './include.js'
-import posthtmlFetch from './fetch'
+import posthtmlFetch from './fetch.js'
 
 import logger from '../logger.js'
 

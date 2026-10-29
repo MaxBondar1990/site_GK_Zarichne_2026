@@ -1,0 +1,230 @@
+/* Світла палітра сайту нерухомості на основі наданого зображення. */
+:root {
+  /* Чотири збережені кольори з вихідного зображення. */
+  --source-earth: #6B4E1F;
+  --source-olive: #4D6B01;
+  --source-sage: #859E60;
+  --source-plum: #6F3C68;
+
+  --brand: var(--source-olive);
+  --brand-hover: #405A00;
+  --brand-active: #354B00;
+  --on-brand: #FFFFFF;
+  --accent: var(--source-plum);
+  --accent-hover: #593053;
+  --accent-active: #472642;
+  --on-accent: #FFFFFF;
+  --sage: var(--source-sage);
+  --on-sage: #26320F;
+  --earth: var(--source-earth);
+  --on-earth: #FFFFFF;
+
+  --background-green: #EDF3E3;
+  --background-ochre: #F7EBCF;
+  --text-olive: #26320F;
+  --text-sage: #5E6651;
+
+  /* Контрастні акценти: обирайте один для конкретного промоблоку. */
+  --accent-ochre: #D9A441;
+  --accent-ochre-hover: #C38F2F;
+  --accent-ochre-active: #BD8E31;
+  --on-accent-ochre: #26320F;
+  --accent-ochre-soft: #F7EBCF;
+  --accent-ochre-ink: #795117;
+  --accent-terracotta: #B64F3C;
+  --accent-terracotta-hover: #9F4232;
+  --accent-terracotta-active: #873729;
+  --on-accent-terracotta: #FFFFFF;
+  --accent-terracotta-soft: #F9EAE5;
+  --accent-terracotta-ink: #9F4232;
+
+  --campaign-bg: var(--accent-ochre);
+  --campaign-text: var(--on-accent-ochre);
+  --listing-offer-bg: var(--accent-terracotta-soft);
+  --listing-offer-text: var(--accent-terracotta-ink);
+  --seller-promo-bg: var(--background-green);
+  --seller-promo-text: var(--text-olive);
+
+  --page: #F7F6F2;
+  --surface: #FFFFFF;
+  --surface-hover: #F1F2EC;
+  --surface-dark: var(--text-olive);
+  --surface-olive: var(--background-green);
+  --surface-plum: #F3EBEF;
+  --surface-earth: var(--background-ochre);
+  --text: var(--text-olive);
+  --text-secondary: var(--text-sage);
+  --text-muted: var(--text-sage);
+  --on-dark: #FFFFFF;
+  --on-dark-secondary: #DADDD1;
+  --divider: #DADDD1;
+  --control-border: #858D7A;
+  --disabled-bg: #E8EAE2;
+  --disabled-text: #5E6651;
+
+  --button-primary-bg: var(--accent-terracotta);
+  --button-primary-text: var(--on-accent-terracotta);
+  --button-primary-hover: var(--accent-terracotta-hover);
+  --button-primary-active: var(--accent-terracotta-active);
+  --button-secondary-bg: var(--surface);
+  --button-secondary-text: var(--brand);
+  --button-secondary-border: var(--brand);
+  --button-secondary-hover: var(--surface-olive);
+  --button-accent-bg: var(--accent);
+  --button-accent-text: var(--on-accent);
+  --button-accent-hover: var(--accent-hover);
+  --button-accent-active: var(--accent-active);
+
+  --link: var(--brand);
+  --link-hover: var(--brand-hover);
+  --link-visited: var(--accent);
+  --focus: var(--accent);
+  --focus-gap: #FFFFFF;
+  --input-bg: var(--surface);
+  --input-text: var(--text);
+  --input-placeholder: var(--text-muted);
+  --input-border: var(--control-border);
+  --input-border-focus: var(--brand);
+  --selection-bg: #E1E9D2;
+  --selection-text: var(--text);
+  --check-bg: var(--brand);
+  --check-icon: #FFFFFF;
+  --toggle-on: var(--brand);
+  --toggle-off: var(--control-border);
+  --toggle-thumb: #FFFFFF;
+  --progress-fill: var(--brand);
+  --progress-track: #E8EAE2;
+
+  --success: var(--brand);
+  --success-bg: var(--surface-olive);
+  --warning: var(--earth);
+  --warning-bg: var(--surface-earth);
+  --error: #A33132;
+  --error-bg: #FAEEEE;
+  --info: var(--accent);
+  --info-bg: var(--surface-plum);
+
+  --listing-price: var(--text);
+  --listing-new-bg: var(--surface-olive);
+  --listing-new-text: var(--brand);
+  --listing-featured-bg: var(--surface-plum);
+  --listing-featured-text: var(--accent);
+  --listing-reserved-bg: var(--surface-earth);
+  --listing-reserved-text: var(--earth);
+  --listing-unavailable-bg: var(--disabled-bg);
+  --listing-unavailable-text: var(--text-secondary);
+  --favorite: var(--accent);
+  --favorite-bg: var(--surface);
+  --photo-label-bg: var(--surface-dark);
+  --photo-label-text: #FFFFFF;
+  --map-pin-bg: var(--brand);
+  --map-pin-text: #FFFFFF;
+  --map-pin-selected-bg: var(--accent);
+  --map-pin-selected-text: #FFFFFF;
+  --map-pin-selected-ring: #FFFFFF;
+  --map-cluster-bg: var(--surface-dark);
+  --map-cluster-text: #FFFFFF;
+
+  --tooltip-bg: var(--surface-dark);
+  --tooltip-text: #FFFFFF;
+  --modal-bg: var(--surface);
+  --overlay: #26320F99;
+  --skeleton: #E8EAE2;
+  --skeleton-highlight: var(--page);
+  --chart-main: var(--brand);
+  --chart-comparison: var(--accent);
+  --chart-extra: var(--earth);
+  --chart-neutral: var(--text-muted);
+  --chart-grid: var(--divider);
+  --shadow-card: 0 4px 20px #26320F0D;
+  --shadow-floating: 0 12px 32px #26320F1F;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--focus-gap);
+}
+
+/* Compatibility names for existing components; values follow the current guide. */
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --green: var(--brand);
+  --green-text: var(--brand);
+  --green-text-hover: var(--brand-hover);
+  --green-soft: var(--surface-olive);
+  --green-selected: var(--selection-bg);
+  --paper: var(--page);
+  --muted: var(--text-muted);
+  --line: var(--divider);
+}
+
+
+
+/* Restrained botanical surfaces with a single terracotta accent. */
+:root {
+  --brand: #52634B;
+  --brand-hover: #40533A;
+  --brand-active: #31432C;
+  --accent: #B84F26;
+  --accent-hover: #A24421;
+  --accent-active: #88371B;
+  --on-accent: #FFFFFF;
+  --accent-soft: #F7E8DF;
+  --accent-on-dark: #F1AB83;
+  --accent-ink: #A24421;
+  --accent-terracotta: var(--accent);
+  --accent-terracotta-hover: var(--accent-hover);
+  --accent-terracotta-active: var(--accent-active);
+  --accent-terracotta-soft: var(--accent-soft);
+  --accent-terracotta-ink: var(--accent-ink);
+  --page: #F6F5F0;
+  --surface: #FFFFFF;
+  --surface-hover: #EEEFE9;
+  --background-green: #E8EDE5;
+  --background-ochre: #EFEAE1;
+  --surface-olive: var(--background-green);
+  --surface-earth: var(--background-ochre);
+  --surface-plum: #EDEAE7;
+  --surface-dark: #28352D;
+  --text-olive: #29342C;
+  --text-sage: #60675F;
+  --text: var(--text-olive);
+  --text-secondary: var(--text-sage);
+  --text-muted: #696E66;
+  --divider: #DADDD4;
+  --control-border: #8A9287;
+  --sage: #DCE4D7;
+  --on-sage: var(--text);
+  --campaign-bg: var(--surface-earth);
+  --campaign-text: var(--text);
+  --listing-price: var(--accent);
+  --listing-featured-bg: var(--accent-soft);
+  --listing-featured-text: var(--accent-ink);
+  --map-pin-bg: var(--accent);
+  --map-pin-selected-bg: var(--accent-hover);
+  --map-pin-text: var(--on-accent);
+  --focus: var(--accent);
+  --selection-bg: #F3D8C7;
+  --selection-text: var(--text);
+  --check-bg: var(--accent);
+  --toggle-on: var(--accent);
+  --progress-fill: var(--accent);
+  --input-border-focus: var(--accent);
+  --button-primary-bg: var(--accent);
+  --button-primary-text: var(--on-accent);
+  --button-primary-hover: var(--accent-hover);
+  --button-primary-active: var(--accent-active);
+  --button-secondary-text: var(--text);
+  --button-secondary-border: #A9B0A4;
+  --button-secondary-hover: var(--surface-hover);
+  --shadow-action: 0 3px 12px #B84F2620;
+  --shadow-card: 0 5px 25px #29342C08;
+  --shadow-floating: 0 14px 40px #29342C1A;
+}
