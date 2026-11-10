@@ -41,3 +41,5 @@
   }
 }
 @media(max-width:700px) { .footer { margin-inline: 10px; border-radius: 22px; } }
+
+.footer .brand__logo { width: 230px; height: auto; filter: brightness(0) invert(1); }

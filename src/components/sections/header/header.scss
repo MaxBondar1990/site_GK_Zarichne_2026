@@ -205,3 +205,12 @@
   &:hover { background: var(--button-primary-hover); }
   &:active { background: var(--button-primary-active); }
 }
+
+.brand__logo { display: block; width: 206px; height: auto; }
+@media (max-width: 760px) {
+  .header .brand__logo { width: 172px; }
+}
+
+.header.header--overlay:not(.header--scrolled) .brand__logo {
+  filter: brightness(0) invert(1);
+}

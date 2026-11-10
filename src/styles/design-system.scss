@@ -25,13 +25,11 @@ body .residence {
   .kicker { color: var(--text-secondary); }
   .intro__content > .kicker { color: var(--on-dark); }
   .intro__image { filter: brightness(1.04) saturate(.92); }
-  .intro__caption { top: 145px; opacity: 1; background: var(--accent); color: var(--on-accent); border-radius: 5px; padding: 8px 12px; }
   .intro__card.highlights { border: 1px solid #ffffff60; color: var(--text); }
   .highlights__slide--plum { background: var(--surface); color: var(--text); }
   .highlights__slide--olive { background: var(--background-green); color: var(--text); }
   .highlights__slide--ochre { background: var(--background-ochre); color: var(--text); }
   .intro .highlights__slide a { color: var(--accent-ink); font-weight: 700; }
-  .highlights__number { color: var(--accent); opacity: 1; }
   .story__feature { background: var(--background-green); }
   .story__feature .text-link { color: var(--accent-ink); }
   .image-tile > .image-ribbon { top: 22px; bottom: auto; left: 0; font-size: 10px; }

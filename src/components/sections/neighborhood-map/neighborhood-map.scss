@@ -1,0 +1,65 @@
+.residence .location-band.neighborhood-map {
+  display: grid; grid-template-columns: 1.25fr 1fr; overflow: hidden;
+  background: var(--background-ochre); min-width: 0;
+}
+.residence .neighborhood-map > .neighborhood-map__stage {
+  position: relative; min-height: 620px; padding: 0; min-width: 0;
+  background: #e5e9df; isolation: isolate;
+}
+.neighborhood-map {
+  &__canvas { position: absolute; inset: 0; z-index: 0; font-family: Manrope, Arial, sans-serif; }
+  &__canvas .leaflet-tile-pane { filter: saturate(.4) contrast(.94) brightness(1.04); }
+  &__canvas .leaflet-control-attribution { font-size: 10px; }
+  &__tools { position: absolute; z-index: 500; top: 16px; left: 16px; display: flex; flex-wrap: wrap; gap: 6px; right: 16px; pointer-events: none; }
+  &__tools button { pointer-events: auto; border: 1px solid var(--divider); border-radius: 10px; background: var(--surface); padding: 10px 14px; min-height: 42px; font-size: 12px; color: var(--text); box-shadow: 0 3px 14px #26320f14; }
+  &__tools button:hover { background: var(--surface-hover); }
+  &__status { position: absolute; z-index: 450; bottom: 42px; left: 16px; right: 60px; padding: 14px; margin: 0; border-radius: 12px; background: var(--surface); color: var(--text); font-size: 12px; }
+  &__filters { display: flex; flex-wrap: wrap; gap: 6px; }
+  &__filters button { min-height: 36px; padding: 8px 12px; border: 1px solid #26320f26; border-radius: 9px; background: transparent; color: var(--text); font-size: 12px; }
+  &__filters button[aria-pressed=true] { background: var(--text); color: var(--on-dark); border-color: var(--text); }
+  &__places { max-height: 224px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #859e6066 transparent; }
+  &__place { display: grid; width: 100%; grid-template-columns: 20px 1fr auto; gap: 10px; align-items: center; padding: 12px 8px; text-align: left; border: 0; border-bottom: 1px solid #26320f1a; background: transparent; color: var(--text); border-radius: 0; min-height: 56px; }
+  &__place:hover, &__place[aria-pressed=true] { background: #fff8; }
+  &__place > span { min-width: 0; }
+  &__place strong { display: block; font-size: 13px; font-weight: 600; line-height: 1.4; }
+  &__place small { display: block; color: var(--text-secondary); font-size: 11px; line-height: 1.5; }
+  &__place-dot { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; color: #fff; font-size: 10px; font-weight: 600; }
+  &__distance { font-size: 12px; white-space: nowrap; color: var(--text-secondary); }
+  &__marker, &__home-marker, &__cluster { display: flex; align-items: center; justify-content: center; }
+  &__marker > span:first-child { display: grid; place-items: center; width: 32px; height: 32px; border: 3px solid #fff; border-radius: 50%; box-shadow: 0 2px 9px #26320f45; font-size: 12px; font-weight: 700; color: #fff; }
+  &__home-marker > span { display: grid; place-items: center; width: 46px; height: 46px; background: var(--accent-terracotta); color: #fff; font-size: 24px; font-weight: 700; border: 4px solid #fff; border-radius: 50%; box-shadow: 0 3px 15px #26320f55; }
+  &__home-marker > span img { display: block; width: 32px; height: 32px; object-fit: contain; filter: brightness(0) invert(1); }
+  &__cluster { border-radius: 50%; border: 4px solid #ffffffba; background: var(--text); color: #fff; box-shadow: 0 2px 10px #26320f33; font-size: 14px; font-weight: 700; }
+  &__home-label { border: 0; border-radius: 7px; padding: 6px 10px; color: var(--text); font: 600 12px Manrope, Arial, sans-serif; box-shadow: 0 2px 8px #26320f22; }
+  &__popup { font-family: Manrope, Arial, sans-serif; color: var(--text); }
+  &__popup > span { display: block; font-size: 10px; letter-spacing: .08em; color: var(--text-secondary); margin-bottom: 6px; }
+  &__popup > strong { display: block; font-size: 15px; font-weight: 600; line-height: 1.4; }
+  &__popup > div { display: flex; gap: 18px; margin-top: 10px; }
+  &__popup a { display: inline-flex; min-height: 32px; align-items: center; color: var(--accent-terracotta-ink); font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+  &__sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+// Keep cluster counts centered even when Leaflet's marker display rule loads later.
+.neighborhood-map__canvas .neighborhood-map__cluster {
+  display: grid; place-items: center; line-height: 1;
+}
+.residence .neighborhood-map > .neighborhood-map__content { padding: 32px; min-width: 0; }
+.residence .neighborhood-map__content > .kicker { margin: 0 0 14px; font-size: 10px; }
+.residence .neighborhood-map__content h2 { margin: 0 0 14px; font-size: clamp(28px, 3.1vw, 44px); line-height: 1.12; letter-spacing: -.035em; }
+.residence .neighborhood-map .neighborhood-map__address { font-size: 13px; line-height: 1.6; margin: 0 0 20px; color: var(--text-secondary); }
+.residence .neighborhood-map .neighborhood-map__count { margin: 16px 0 6px; font-size: 11px; color: var(--text-secondary); }
+.residence .neighborhood-map .neighborhood-map__note { margin: 16px 0 10px; font-size: 11px; line-height: 1.6; color: var(--text-secondary); }
+.residence .neighborhood-map .neighborhood-map__google { display: inline-flex; min-height: 36px; align-items: center; font-size: 12px; color: var(--accent-terracotta-ink); }
+.residence .neighborhood-map .neighborhood-map__popup p { margin: 8px 0 0; font-size: 12px; line-height: 1.5; color: var(--text-secondary); }
+@media (max-width: 900px) {
+  .residence .location-band.neighborhood-map { grid-template-columns: 1fr; }
+  .residence .neighborhood-map > .neighborhood-map__stage { min-height: 440px; }
+  .residence .neighborhood-map > .neighborhood-map__content { padding: 28px; }
+  .neighborhood-map__places { max-height: 224px; }
+}
+@media (max-width: 500px) {
+  .residence .neighborhood-map > .neighborhood-map__stage { min-height: 380px; }
+  .residence .neighborhood-map > .neighborhood-map__content { padding: 26px 22px; }
+  .neighborhood-map__filters button { min-height: 42px; }
+  .neighborhood-map__tools { top: 12px; left: 12px; }
+  .neighborhood-map__canvas .leaflet-popup-content { max-width: 215px; }
+}

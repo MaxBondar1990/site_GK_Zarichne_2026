@@ -16,7 +16,6 @@ motion.add('(prefers-reduced-motion: no-preference)', () => {
         toggleActions: 'play reset restart reset' }
     });
     entrance.from('.intro__image', { scale: 1.12, duration: 1.6 }, 0)
-      .from('.intro__top', { y: -35, opacity: 0, duration: 0.8 }, 0.1)
       .from('.intro__content > .kicker', { x: -65, opacity: 0, duration: 0.85 }, 0.25)
       .from('.intro__content > h1', { x: -100, opacity: 0, duration: 1.1 }, 0.4)
       .from('.intro__content > p:not(.kicker)', { x: 65, opacity: 0, duration: 0.95 }, 0.6)
